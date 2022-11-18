@@ -8,7 +8,20 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/strapi'
   ],
-  strapi: {
-
+  vite: {
+    server: {
+      fs: {
+        allow: [
+          '/home/strift/Code/OpenSource/nuxt-strapi'
+        ]
+      }
+    }
+  },
+  runtimeConfig: {
+    public: {
+      strapi: {
+        // NUXT_PUBLIC_STRAPI_URL is auto-injected in url
+      }
+    }
   }
 })
