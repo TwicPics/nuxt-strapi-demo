@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     shim: false
   },
   modules: [
-    '@nuxtjs/strapi'
+    '@nuxtjs/strapi',
+    '@twicpics/components/nuxt3'
   ],
   runtimeConfig: {
     public: {
@@ -15,5 +16,8 @@ export default defineNuxtConfig({
         // url: process.env.NUXT_PUBLIC_STRAPI_URL
       }
     }
+  },
+  twicpics: {
+    domain: process.env.NUXT_PUBLIC_TWICPICS_DOMAIN
   }
 })
