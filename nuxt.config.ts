@@ -11,7 +11,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       strapi: {
-        // NUXT_PUBLIC_STRAPI_URL is auto-injected in url
+        // Runtime config value is automatically replaced by matching environment variable
+        // url: process.env.NUXT_PUBLIC_STRAPI_URL
       }
     }
   }
