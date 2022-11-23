@@ -89,7 +89,7 @@ For an app running on `http://localhost:1337`, run
 ngrok http 1337
 ```
 
-Ngrok will prompt a message containing a line as following
+Ngrok will prompt an output that contains a line that looks like the following
 ```bash
 Forwarding                    https://0aca-2a01-e0a-20b-ff40-6830-a17b-ecf7-47e3.eu.ngrok.io -> http://localhost:1337 
 ```
