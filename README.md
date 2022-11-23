@@ -54,14 +54,14 @@ Navigate to the **Content Manager** and select your newly created _Article_ coll
 
 Add a few articles (at least 4 to have relevant results) by clicking _Create new entry_ and filling the data.
 
-> **Note**
+> **Note** <br/>
 > You can use [Unsplash images](https://unsplash.com/s/photos/landscape?orientation=landscape) to find images. We recommend downloading them in _Large_ format to have enough quality to play with the image optimization features. 
 
 ### Nuxt app
 
 Copy the `.env.example` file as `.env` and update the environment variables as needed.
 
-> **Note**
+> **Note** <br/>
 > If you didn't change it, the default host for Strapi is http://localhost:1337
 
 Start the development server
@@ -96,7 +96,7 @@ Forwarding                    https://0aca-2a01-e0a-20b-ff40-6830-a17b-ecf7-47e3
 
 This is the **forwarding address** you need to use as source in your TwicPics path.
 
-> **Warning**
+> **Warning** <br/>
 > This is only for local development. In production, use your real Strapi app hostname.
 
 ## Production
