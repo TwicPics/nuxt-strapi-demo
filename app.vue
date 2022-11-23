@@ -14,8 +14,12 @@ const TWICPICS_PATH = 'local-strapi'
 <template>
   <div>
     <h1>Hello world</h1>
-    <div v-if="pending">Loading articles...</div>
-    <div v-else-if="error">An error occurred.</div>
+    <div v-if="pending">
+      Loading articles...
+    </div>
+    <div v-else-if="error">
+      An error occurred.
+    </div>
     <div v-else>
       <div v-for="article in articles?.data" :key="article.id">
         <h2>
@@ -24,12 +28,18 @@ const TWICPICS_PATH = 'local-strapi'
         <p>
           {{ article.attributes.Excerpt }}
         </p>
-        <TwicImg :src="`${TWICPICS_PATH}${article.attributes.Cover.data.attributes.formats.large.url}`"
+        <TwicImg
+          :src="`${TWICPICS_PATH}${article.attributes.Cover.data.attributes.formats.large.url}`"
           :alt="article.attributes.Cover.data.attributes.alternativeText"
           :ratio="`${article.attributes.Cover.data.attributes.formats.large.width}:${article.attributes.Cover.data.attributes.formats.large.height}`"
-          :style="{ height: `${article.attributes.Cover.data.attributes.formats.large.height}px`, width: `${article.attributes.Cover.data.attributes.formats.large.width}px` }" />
+          :style="
+            {
+              height: `${article.attributes.Cover.data.attributes.formats.large.height}px`,
+              width: `${article.attributes.Cover.data.attributes.formats.large.width}px`
+            }
+          "
+        />
       </div>
     </div>
   </div>
 </template>
-
