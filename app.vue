@@ -2,12 +2,12 @@
 import { Article } from '~/types'
 
 const { find } = useStrapi()
-const config = useRuntimeConfig()
 
 const { data: articles, pending, error } = await useAsyncData(
   'articles',
   () => find<Article>('articles', { populate: 'Cover' })
 )
+
 const TWICPICS_PATH = 'local-strapi'
 </script>
 
@@ -24,11 +24,10 @@ const TWICPICS_PATH = 'local-strapi'
         <p>
           {{ article.attributes.Excerpt }}
         </p>
-        <TwicImg :src="`${TWICPICS_PATH}${article.attributes.Cover.data.attributes.formats.thumbnail.url}`"
+        <TwicImg :src="`${TWICPICS_PATH}${article.attributes.Cover.data.attributes.formats.large.url}`"
           :alt="article.attributes.Cover.data.attributes.alternativeText"
-          :ratio="`${article.attributes.Cover.data.attributes.formats.thumbnail.width}:${article.attributes.Cover.data.attributes.formats.thumbnail.height}`"
-          :style="{ height: `${article.attributes.Cover.data.attributes.formats.thumbnail.height}px`, width: `${article.attributes.Cover.data.attributes.formats.thumbnail.width}px` }"
-          class="thumbnail" />
+          :ratio="`${article.attributes.Cover.data.attributes.formats.large.width}:${article.attributes.Cover.data.attributes.formats.large.height}`"
+          :style="{ height: `${article.attributes.Cover.data.attributes.formats.large.height}px`, width: `${article.attributes.Cover.data.attributes.formats.large.width}px` }" />
       </div>
     </div>
   </div>
